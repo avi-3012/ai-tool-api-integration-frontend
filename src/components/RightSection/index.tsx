@@ -103,7 +103,7 @@ const RightSection = ({base64Image, setImageUrl, setSelectedFile}) => {
       window.alert("Image successfully processed!");
       console.log("RESPONSE:",response);
       const data = response.data;
-      async function loadImageFile(){const response = await fetch(data.data.data.output.tmp_url);
+      async function loadImageFile(){const response = await fetch(data.data.data.output.tmp_url, {mode: 'no-cors'});
         const blob = await response.blob();
         const fileName = 'image.jpg';
         const file = new File([blob], fileName, { type: blob.type });
