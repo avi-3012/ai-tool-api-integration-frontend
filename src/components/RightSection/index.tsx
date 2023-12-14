@@ -36,6 +36,7 @@ const RightSection = ({base64Image, setImageUrl, setSelectedFile}) => {
 
   const handleSizeChange = (event: Event, newValue: number | number[]) => {
     setResize(newValue as number);
+    console.log(event);
   };
 
   const handleBackgroundChange = (event: React.ChangeEvent<HTMLInputElement>) => {
